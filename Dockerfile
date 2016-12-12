@@ -8,7 +8,7 @@ RUN apt-get update \
     python-dev \
     python-pip \
     python-setuptools \
-    #python-tk \
+    python-tk \
     --no-install-recommends  \
     && pip install --upgrade pip \
     && apt-get install -y build-essential \
