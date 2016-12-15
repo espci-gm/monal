@@ -4,15 +4,16 @@ MAINTAINER Jean-Luc PLOIX
 
 RUN apt-get update \
     && apt-get install -y \
+    --no-install-recommends \
     python \
     python-dev \
     python-pip \
-    python-setuptools \
-    --no-install-recommends  \
-    && pip install --upgrade pip \
-    && apt-get install -y build-essential \
-    --no-install-recommends \
-    libatlas-base-dev \
+    python-setuptools
+RUN pip install --upgrade pip \
+RUN apt-get install -y \ 
+--no-install-recommends \
+    #build-essential \
+    #libatlas-base-dev \
     gfortran
 RUN pip install --user --no-cache-dir monal
 RUN rm -rf /var/lib/apt/lists/*
