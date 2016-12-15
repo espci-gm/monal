@@ -9,7 +9,7 @@ RUN apt-get update \
     python-dev \
     python-pip \
     python-setuptools
-RUN pip install --upgrade pip \
+RUN pip install --upgrade pip
 RUN apt-get install -y \ 
     --no-install-recommends \
     #build-essential \
