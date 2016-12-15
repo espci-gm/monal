@@ -11,7 +11,7 @@ RUN apt-get update \
     python-setuptools
 RUN pip install --upgrade pip \
 RUN apt-get install -y \ 
---no-install-recommends \
+    --no-install-recommends \
     #build-essential \
     #libatlas-base-dev \
     gfortran
